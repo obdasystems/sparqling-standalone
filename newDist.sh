@@ -4,8 +4,7 @@ VERSION=$(cat package.json | grep version | cut -c15-19)
 FOLDER=sparqling-standalone-"$VERSION"
 BASE_VERSION=base
 
-rm -r $MONOLITH_FOLDER
-mkdir $MONOLITH_FOLDER
+mkdir $FOLDER
 
 cp sparqling-ws-1.0.0.jar $FOLDER
 cp -r ui $FOLDER
