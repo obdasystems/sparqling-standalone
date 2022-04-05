@@ -10,6 +10,6 @@ SET JAR=sparqling-ws-1.0.0.jar
 SET JAVA_OPTS=-Dlogback.configurationFile=%MONOLITH_HOME%logback.xml -Dfile.encoding=UTF-8
 
 :: Launch MWS (Powered by Jetty) and Monolith
-java -jar %JAVA_OPTS% ^
-	-cp "%HOME%%JAR%" ^
+java %JAVA_OPTS% ^
+	-jar "%HOME%%JAR%" ^
 	"%HOME%ui"
