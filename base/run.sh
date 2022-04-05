@@ -24,12 +24,12 @@ fi
 echo "Using java from: $JAVA"
 
 # Java options
-JAVA_OPTS="${JAVA_OPTS:-Dlogback.configurationFile="$HOME/logback.xml"}"
+JAVA_OPTS="${JAVA_OPTS:--Dlogback.configurationFile="$HOME/logback.xml"}"
 # Java extra (platform-specific) options 
 JAVA_EXT_OPTS=
 
 # Start Jetty WebServer
-"$JAVA" -jar \
+"$JAVA" \
     $JAVA_OPTS ${JAVA_EXT_OPTS:+"$JAVA_EXT_OPTS"} \
-    "$HOME/$JAR" \
+    -jar "$HOME/$JAR" \
     "$HOME/ui"
