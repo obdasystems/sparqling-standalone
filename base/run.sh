@@ -29,7 +29,7 @@ JAVA_OPTS="${JAVA_OPTS:-Dlogback.configurationFile="$HOME/logback.xml"}"
 JAVA_EXT_OPTS=
 
 # Start Jetty WebServer
-"$JAVA" \
+"$JAVA" -jar \
     $JAVA_OPTS ${JAVA_EXT_OPTS:+"$JAVA_EXT_OPTS"} \
     "$HOME/$JAR" \
     "$HOME/ui"
