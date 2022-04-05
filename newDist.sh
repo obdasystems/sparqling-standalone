@@ -2,16 +2,15 @@
 
 VERSION=$(cat package.json | grep version | cut -c15-19)
 FOLDER=sparqling-standalone-"$VERSION"
-BASE_VERSION=base
 
 mkdir $FOLDER
 
 cp sparqling-ws-1.0.0.jar $FOLDER
 cp -r ui $FOLDER
-cp $BASE_VERSION/run.sh $FOLDER
+cp base/run.sh $FOLDER
 chmod +x $FOLDER/run.sh
-cp $BASE/run.bat $FOLDER
-cp $BASE/logback.xml $FOLDER
+cp base/run.bat $FOLDER
+cp base/logback.xml $FOLDER
 
 zip -r "sparqling-standalone-$VERSION.zip" $FOLDER
 
