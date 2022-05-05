@@ -9,6 +9,8 @@ cp sparqling-ws-1.0.0.jar $FOLDER
 cp -r ui $FOLDER
 cp base/run.sh $FOLDER
 chmod +x $FOLDER/run.sh
+cp base/run.command $FOLDER
+chmod +x $FOLDER/run.command
 cp base/run.bat $FOLDER
 cp base/logback.xml $FOLDER
 
