@@ -46,7 +46,7 @@ jobs:
       uses: actions/upload-artifact@v3.0.0
       with:
         name: ui
-        path: demo/
+        path: public/
     - name: Upload package.json
       uses: actions/upload-artifact@v3.0.0
       with:
