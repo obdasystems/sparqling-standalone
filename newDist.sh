@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION=$(cat package.json | grep version | cut -c15-19)
+VERSION=$(cat package.json | grep -m 1 version | cut -c15-19)
 FOLDER=sparqling-standalone-"$VERSION"
 
 mkdir $FOLDER
