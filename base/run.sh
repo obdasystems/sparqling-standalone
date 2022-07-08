@@ -28,6 +28,11 @@ JAVA_OPTS="${JAVA_OPTS:--Dlogback.configurationFile="$HOME/logback.xml"}"
 # Java extra (platform-specific) options 
 JAVA_EXT_OPTS=
 
+# Use dock icon on macOS
+if [[ "$OSTYPE" =~ ^darwin* ]]; then
+    JAVA_EXT_OPTS="-Xdock:icon=$HOME/resources/icons/icon_512@1x.png"
+fi
+
 # Start Jetty WebServer
 "$JAVA" \
     $JAVA_OPTS ${JAVA_EXT_OPTS:+"$JAVA_EXT_OPTS"} \
