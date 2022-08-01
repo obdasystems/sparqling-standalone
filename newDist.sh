@@ -13,6 +13,7 @@ cp base/run.command $FOLDER
 chmod +x $FOLDER/run.command
 cp base/run.bat $FOLDER
 cp base/logback.xml $FOLDER
+cp -r base/resources $FOLDER
 
 zip -r "sparqling-standalone-$VERSION.zip" $FOLDER
 
